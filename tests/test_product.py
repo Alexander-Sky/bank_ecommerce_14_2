@@ -1,4 +1,3 @@
-import pytest
 from src.product import Product
 
 
@@ -41,12 +40,14 @@ def test_product_price_setter_zero_or_negative(capsys):
 
 def test_new_product_no_duplicate():
     """Тест new_product без дубликатов"""
-    product = Product.new_product({
-        "name": "Планшет",
-        "description": "10 дюймов",
-        "price": 25000.0,
-        "quantity": 3
-    })
+    product = Product.new_product(
+        {
+            "name": "Планшет",
+            "description": "10 дюймов",
+            "price": 25000.0,
+            "quantity": 3,
+        }
+    )
     assert product.name == "Планшет"
     assert product.price == 25000.0
     assert product.quantity == 3
@@ -58,7 +59,7 @@ def test_new_product_with_duplicate():
 
     result = Product.new_product(
         {"name": "Ноутбук", "description": "Игровой", "price": 90000.0, "quantity": 3},
-        existing_products=[existing]
+        existing_products=[existing],
     )
 
     # Должен вернуть существующий объект

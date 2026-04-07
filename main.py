@@ -35,7 +35,7 @@ if __name__ == "__main__":
     existing_products = [product1, product2, product3]
     new_phone = Product.new_product(
         {"name": "Samsung Galaxy S23 Ultra", "description": "256GB", "price": 190000.0, "quantity": 3},
-        existing_products=existing_products
+        existing_products=existing_products,
     )
     print(f"Товар: {new_phone.name}, цена: {new_phone.price}, количество: {new_phone.quantity}")
 

@@ -1,4 +1,3 @@
-import pytest
 from src.category import Category
 from src.product import Product
 
@@ -33,6 +32,10 @@ def test_category_counters():
 
     assert Category.category_count == 2
     assert Category.product_count == 3  # 2 + 1 товар
+
+    # Чтобы flake8 не ругался на неиспользуемые переменные, явно укажем, что они используются
+    assert category1.name == "Компьютеры"
+    assert category2.name == "Одежда"
 
 
 def test_add_product():

@@ -33,14 +33,14 @@ class Product:
         # Доп. задание: проверка на понижение цены
         if new_price < self.__price:
             answer = input(f"Цена понижается с {self.__price} до {new_price}. Подтвердите (y/n): ")
-            if answer.lower() != 'y':
+            if answer.lower() != "y":
                 print("Изменение цены отменено")
                 return
 
         self.__price = new_price
 
     @classmethod
-    def new_product(cls, product_data: dict, existing_products: list = None) -> 'Product':
+    def new_product(cls, product_data: dict, existing_products: list = None) -> "Product":
         """
         Класс-метод для создания продукта из словаря.
         Доп. задание: проверка дубликатов по имени.
@@ -61,5 +61,5 @@ class Product:
             name=product_data["name"],
             description=product_data["description"],
             price=product_data["price"],
-            quantity=product_data["quantity"]
+            quantity=product_data["quantity"],
         )
