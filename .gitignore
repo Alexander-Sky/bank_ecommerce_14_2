@@ -237,3 +237,14 @@ cover/
 ../test_9_2*/
 ../time/
 ../weather/
+
+# Cross-platform OS garbage
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Backup files (вдруг кто-то пользуется)
+*.bak
+*.tmp
+*.swp
+*.orig
